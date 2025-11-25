@@ -3,7 +3,7 @@
 #include "common.h"
 #include "common_threads.h"
 
-volatile int counter = 0; 
+volatile int counter = 0; //volatile 的基本作用，防止编译器优化。但不能保证原子性。
 int loops;
 
 void *worker(void *arg) {
