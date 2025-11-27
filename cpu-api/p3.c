@@ -17,7 +17,7 @@ main(int argc, char *argv[])
         // child (new process)
         printf("hello, I am child (pid:%d)\n", (int) getpid());
         char *myargs[3];
-        myargs[0] = strdup("wc");   // program: "wc" (word count)
+        myargs[0] = strdup("wc");   // program: "wc" (word count),也可以是ls/cat等
         myargs[1] = strdup("p3.c"); // argument: file to count
         myargs[2] = NULL;           // marks end of array
         execvp(myargs[0], myargs);  // runs word count
